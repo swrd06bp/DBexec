@@ -1,14 +1,31 @@
+# DBexec
 
-           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                   Version 1, August 2019
+Be able to run a SQL query
 
-Copyright (C) 2019 Boris Ploix <boris.px1@gmail.com>
+### Installation
 
-Everyone is permitted to copy and distribute verbatim or modified
-copies of this license document, and changing it is allowed as long
-as the name is changed.
+With pathogen
+```sh
+cd .vim/bundle/
+git clone https://github.com/swrd06bp/DBexec
+```
 
-           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+Add the following lines in your `.vimrc`
+```sh
+" DBexec
+let g:DBexec = 'production'
+let g:creds = {}
+let g:creds.production = {}
+let g:creds.production.hostname = ''
+let g:creds.production.database = ''
+let g:creds.production.username = ''
+let g:creds.production.password = ''
+let g:creds.production.verification = 1"
+```
 
- 0. You just DO WHAT THE FUCK YOU WANT TO.
+
+
+### Usage
+
+:<localleader>d or \d to run the query
+
